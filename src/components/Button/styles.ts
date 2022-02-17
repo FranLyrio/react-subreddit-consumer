@@ -16,7 +16,9 @@ export const buttonModifiers = {
     }
   `,
   disabled: () => css`
-    cursor: not-allowed;
+    :disabled {
+      cursor: not-allowed;
+    }
   `
 }
 
