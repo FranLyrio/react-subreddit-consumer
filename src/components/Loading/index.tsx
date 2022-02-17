@@ -5,6 +5,6 @@ export type LoadingProps = {
   color?: 'primary' | 'secondary'
 }
 
-export const Loading = ({ size, color }: LoadingProps) => (
-  <S.Spinner size={size} color={color} />
+export const Loading = ({ size, color, ...props }: LoadingProps) => (
+  <S.Spinner size={size} color={color} {...props} />
 )
