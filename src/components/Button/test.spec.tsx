@@ -1,4 +1,6 @@
+import 'jest-styled-components'
 import { screen } from '@testing-library/react'
+
 import { Button } from '.'
 import { renderWithTheme } from '../../utils/renderWithTheme'
 
@@ -32,5 +34,26 @@ describe('<Button />', () => {
     expect(button).toHaveStyle({
       width: '100%'
     })
+  })
+
+  it('deve renderizar o componente desabilitado quando estiver em estado de carregamento', () => {
+    renderWithTheme(<Button isLoading />)
+
+    const button = screen.getByRole('button')
+    expect(button).toBeInTheDocument()
+    expect(button).toHaveStyleRule('cursor', 'not-allowed', {
+      modifier: ':disabled'
+    })
+  })
+
+  it('não deve renderizar o elemento filho quando estiver em estado de carregamento', () => {
+    renderWithTheme(
+      <Button isLoading>
+        <p>Meu elemento filho</p>
+      </Button>
+    )
+
+    const children = screen.queryByText(/meu elemento filho/i)
+    expect(children).not.toBeInTheDocument()
   })
 })
