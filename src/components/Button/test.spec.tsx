@@ -14,13 +14,14 @@ describe('<Button />', () => {
       'background-color': '#a7b0be',
       width: '20.2rem'
     })
+    expect(button).not.toHaveProperty('isSelected')
+    expect(button).not.toHaveProperty('isLoading')
   })
 
   it('deve renderizar o componente com cor primária de fundo', () => {
     renderWithTheme(<Button color="primary" />)
 
     const button = screen.getByRole('button')
-    expect(button).toBeInTheDocument()
     expect(button).toHaveStyle({
       'background-color': '#6324c6'
     })
@@ -30,7 +31,6 @@ describe('<Button />', () => {
     renderWithTheme(<Button width="full" />)
 
     const button = screen.getByRole('button')
-    expect(button).toBeInTheDocument()
     expect(button).toHaveStyle({
       width: '100%'
     })
@@ -40,7 +40,7 @@ describe('<Button />', () => {
     renderWithTheme(<Button isLoading />)
 
     const button = screen.getByRole('button')
-    expect(button).toBeInTheDocument()
+    expect(button).toBeDisabled()
     expect(button).toHaveStyleRule('cursor', 'not-allowed', {
       modifier: ':disabled'
     })
