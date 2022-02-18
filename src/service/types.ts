@@ -1,7 +1,7 @@
 export type Post = {
   id: string
   url: string
-  created_utc: Date
+  created_utc: number
   title: string
   author: string
 }

@@ -1,8 +1,10 @@
+import { useEffect, useMemo } from 'react'
+import { timeDifference } from '../../utils/timeDifference'
 import * as S from './styles'
 
 type PostCardProps = {
   title?: string
-  time?: Date
+  time?: number
   userNickName?: string
   link?: string
 }
@@ -13,6 +15,12 @@ export const PostCard = ({
   title,
   userNickName
 }: PostCardProps) => {
+  const diffTime = useMemo(() => {
+    if (time) {
+      return timeDifference(time)
+    }
+  }, [time])
+
   return (
     <div>
       <S.Divider />
@@ -23,7 +31,7 @@ export const PostCard = ({
         <S.WrapperInfo>
           <S.Title>{title}</S.Title>
           <S.SubTitle>
-            enviado há {time} por <S.NickName>{userNickName}</S.NickName>
+            enviado há {diffTime} por <S.NickName>{userNickName}</S.NickName>
           </S.SubTitle>
           <S.Link href={link} target="_blank">
             {link}
