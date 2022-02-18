@@ -4,14 +4,18 @@ import { ButtonProps } from '.'
 type WrapperProps = Pick<ButtonProps, 'width' | 'color' | 'isSelected'>
 
 export const buttonModifiers = {
-  full: () => css`
+  full: (theme: DefaultTheme) => css`
     width: 100%;
+
+    /* ${theme.breakpoints.small} {
+      min-width: 8rem;
+    } */
   `,
   withPrimaryColor: (theme: DefaultTheme) => css`
-    background-color: ${theme.lightTheme.backgroundColor.primary};
+    background-color: ${theme.colors.primary};
 
     &:hover {
-      background-color: ${theme.lightTheme.backgroundColor.primary};
+      background-color: ${theme.colors.primary};
       opacity: 0.8;
     }
   `,
@@ -24,8 +28,8 @@ export const buttonModifiers = {
 
 export const Wrapper = styled.button<WrapperProps>`
   ${({ theme, width, color, isSelected, disabled }) => css`
-    color: ${theme.lightTheme.fontColor.white};
-    background-color: ${theme.lightTheme.backgroundColor.gray};
+    color: ${theme.colors.white};
+    background-color: ${theme.colors.gray};
     font-weight: ${theme.fonts.weight.normal};
     font-size: ${theme.fonts.size.medium};
     line-height: ${theme.fonts.lineHeight.medium};
@@ -35,11 +39,11 @@ export const Wrapper = styled.button<WrapperProps>`
     transition: 0.2s;
 
     &:hover {
-      background-color: ${theme.lightTheme.grayDark};
+      background-color: ${theme.colors.grayDark};
       opacity: 0.6;
     }
 
-    ${width === 'full' && buttonModifiers.full()}
+    ${width === 'full' && buttonModifiers.full(theme)}
     ${color === 'primary' && buttonModifiers.withPrimaryColor(theme)}
     ${isSelected && buttonModifiers.withPrimaryColor(theme)}
     ${disabled && buttonModifiers.disabled()}

@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
 
 export const HeaderWrapper = styled.div`
   ${({ theme }) => css`
-    background-color: ${theme.lightTheme.backgroundColor.main};
+    background-color: ${theme.colors.main};
     position: sticky;
     top: 0;
     width: 100%;

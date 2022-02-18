@@ -21,7 +21,7 @@ export const GlobalStyle = createGlobalStyle`
 
   #root {
     ${({ theme }) => css`
-      background-color: ${theme.lightTheme.backgroundColor.main};
+      background-color: ${theme.colors.main};
       min-height: 100vh;
     `}
   }

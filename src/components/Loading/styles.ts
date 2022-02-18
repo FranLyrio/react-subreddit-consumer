@@ -15,12 +15,12 @@ const spinnerModifiers = {
   },
   color: {
     primary: (theme: DefaultTheme) => css`
-      border: 0.3rem solid ${theme.lightTheme.backgroundColor.main};
-      border-left-color: ${theme.lightTheme.backgroundColor.primary};
+      border: 0.3rem solid ${theme.colors.main};
+      border-left-color: ${theme.colors.primary};
     `,
     secondary: (theme: DefaultTheme) => css`
-      border: 0.3rem solid ${theme.lightTheme.backgroundColor.primary};
-      border-left-color: ${theme.lightTheme.backgroundColor.main};
+      border: 0.3rem solid ${theme.colors.primary};
+      border-left-color: ${theme.colors.main};
     `
   }
 }
