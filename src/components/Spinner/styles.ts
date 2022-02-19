@@ -15,11 +15,9 @@ const spinnerModifiers = {
   },
   color: {
     primary: (theme: DefaultTheme) => css`
-      border: 0.3rem solid ${theme.colors.main};
       border-left-color: ${theme.colors.primary};
     `,
     secondary: (theme: DefaultTheme) => css`
-      border: 0.3rem solid ${theme.colors.primary};
       border-left-color: ${theme.colors.main};
     `
   }
@@ -31,6 +29,7 @@ export const Spinner = styled.div<LoadingProps>`
     margin: auto;
     justify-self: center;
     animation: spin 1s linear infinite;
+    border: 0.3rem solid transparent;
 
     ${spinnerModifiers.size[size || 'large']}
     ${spinnerModifiers.color[color || 'primary'](theme)}

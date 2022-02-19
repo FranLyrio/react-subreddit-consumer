@@ -1,5 +1,9 @@
 import styled, { css } from 'styled-components'
 
+export const PostCard = styled.div`
+  background-color: transparent;
+`
+
 export const Wrapper = styled.div`
   width: 100%;
   display: flex;
@@ -8,21 +12,28 @@ export const Wrapper = styled.div`
   margin: 1.2rem 0;
 `
 
-export const WrapperInfo = styled.div`
-  width: 100%;
-`
-
-export const Avatar = styled.div`
+export const Image = styled.div`
   ${({ theme }) => css`
     background-color: ${theme.colors.gray};
     width: 7.7rem;
     height: 7.7rem;
     border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
 
     ${theme.breakpoints.small} {
       display: none;
     }
   `}
+
+  img {
+    width: 100%;
+    border-radius: 0.8rem;
+  }
+`
+
+export const WrapperInfo = styled.div`
+  width: 100%;
 `
 
 export const Title = styled.h4`
@@ -57,6 +68,8 @@ export const Link = styled.a`
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    max-width: 95rem;
 
     margin-top: 0.9rem;
     display: block;

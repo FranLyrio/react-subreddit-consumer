@@ -22,7 +22,7 @@ export const buttonModifiers = {
   `
 }
 
-export const Wrapper = styled.button<WrapperProps>`
+export const Button = styled.button<WrapperProps>`
   ${({ theme, width, color, isSelected, disabled }) => css`
     color: ${theme.colors.white};
     background-color: ${theme.colors.gray};

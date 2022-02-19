@@ -1,9 +1,9 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 
 import { Button } from '../../components/Button'
 import { Header } from '../../components/Header'
 import { PostCard } from '../../components/PostCard'
-import { Loading } from '../../components/Loading'
+import { Spinner } from '../../components/Spinner'
 
 import { useRedditService } from '../../service/redditService'
 import { Post } from '../../service/types'
@@ -75,7 +75,7 @@ export const Posts = () => {
 
       <S.PostWrapper>
         {isLoading ? (
-          <Loading />
+          <Spinner />
         ) : (
           <>
             {posts.map((post, index) => (
@@ -85,6 +85,7 @@ export const Posts = () => {
                 time={post.created_utc}
                 title={post.title}
                 userNickName={post.author}
+                media={post.preview?.images[0].source.url}
               />
             ))}
 
