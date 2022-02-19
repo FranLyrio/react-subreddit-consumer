@@ -31,7 +31,7 @@ export const PostCard = ({
       <S.Wrapper>
         <S.Image>
           <img
-            src={media ? media : reactLogo}
+            src={media ? media : undefined}
             aria-label="Imagem relacionada à postagem"
           />
         </S.Image>
