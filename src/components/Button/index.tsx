@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes } from 'react'
-import { Loading } from '../Loading'
+import { Spinner } from '../Spinner'
 import * as S from './styles'
 
 export type ButtonProps = {
@@ -18,14 +18,14 @@ export const Button = ({
   ...props
 }: ButtonProps) => {
   return (
-    <S.Wrapper
+    <S.Button
       disabled={isLoading}
       isSelected={isSelected}
       width={width}
       color={color}
       {...props}
     >
-      {isLoading ? <Loading size="small" color="secondary" /> : <>{children}</>}
-    </S.Wrapper>
+      {isLoading ? <Spinner size="small" color="secondary" /> : <>{children}</>}
+    </S.Button>
   )
 }

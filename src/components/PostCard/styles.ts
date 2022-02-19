@@ -1,5 +1,11 @@
 import styled, { css } from 'styled-components'
 
+export const PostCard = styled.div`
+  ${({ theme }) => css`
+    background-color: ${theme.colors.main};
+  `}
+`
+
 export const Wrapper = styled.div`
   width: 100%;
   display: flex;

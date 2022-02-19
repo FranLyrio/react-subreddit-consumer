@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-export const Wrapper = styled.header`
+export const Header = styled.header`
   ${({ theme }) => css`
     background-color: ${theme.colors.primary};
     height: 9.1rem;

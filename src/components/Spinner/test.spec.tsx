@@ -1,12 +1,12 @@
 import 'jest-styled-components'
 import { screen } from '@testing-library/react'
 
-import { Loading } from '.'
+import { Spinner } from '.'
 import { renderWithTheme } from '../../utils/renderWithTheme'
 
 describe('<Loading />', () => {
   it('deve renderizar o componente com suas propriedades padrão', () => {
-    renderWithTheme(<Loading data-testid="loading" />)
+    renderWithTheme(<Spinner data-testid="loading" />)
 
     const loading = screen.getByTestId('loading')
     expect(loading).toBeInTheDocument()
@@ -18,7 +18,7 @@ describe('<Loading />', () => {
   })
 
   it('deve renderizar o componente com cor "secondary ao passar propriedade', () => {
-    renderWithTheme(<Loading data-testid="loading" color="secondary" />)
+    renderWithTheme(<Spinner data-testid="loading" color="secondary" />)
 
     const loading = screen.getByTestId('loading')
     expect(loading).toHaveStyle({
@@ -27,7 +27,7 @@ describe('<Loading />', () => {
   })
 
   it('deve renderizar o componente com tamanho "small" ao passar propriedade', () => {
-    renderWithTheme(<Loading data-testid="loading" size="small" />)
+    renderWithTheme(<Spinner data-testid="loading" size="small" />)
 
     const loading = screen.getByTestId('loading')
     expect(loading).toHaveStyle({

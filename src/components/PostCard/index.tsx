@@ -22,7 +22,7 @@ export const PostCard = ({
   }, [time])
 
   return (
-    <div>
+    <S.PostCard>
       <S.Divider />
 
       <S.Wrapper>
@@ -38,6 +38,6 @@ export const PostCard = ({
           </S.Link>
         </S.WrapperInfo>
       </S.Wrapper>
-    </div>
+    </S.PostCard>
   )
 }

@@ -4,8 +4,8 @@ import * as S from './styles'
 
 export const Header = () => {
   return (
-    <S.Wrapper>
+    <S.Header>
       <img src={logoImage} alt="Uma logo escrito REACTJS" />
-    </S.Wrapper>
+    </S.Header>
   )
 }
