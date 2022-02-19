@@ -12,7 +12,9 @@ ou
 yarn start
 ```
 
-Os componentes dessa aplicação possuem documentação. Para visualizá-los em desenvolvimento, execute:
+Os componentes dessa aplicação possuem documentação.
+Para visualizá-los, visite <https://winnin-storybook-franciele.netlify.app/?path=/story/components-button--selected>.
+Ou, com o código aberto, execute no terminal:
 
 ```shell
 yarn storybook
