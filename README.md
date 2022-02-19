@@ -13,7 +13,7 @@ yarn start
 ```
 
 Os componentes dessa aplicação possuem documentação.
-Para visualizá-los, visite <https://winnin-storybook-franciele.netlify.app/?path=/story/components-button--selected>.
+Para visualizá-los, visite o storybook <a href="https://winnin-storybook-franciele.netlify.app/?path=/story/components-button--selected" target="_blank">publicado</a>.
 Ou, com o código aberto, execute no terminal:
 
 ```shell
