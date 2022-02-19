@@ -1,3 +1,10 @@
+type Image = {
+  source: {
+    resolutions?: [{ url: string }]
+    url: string
+  }
+}
+
 export type Post = {
   id: string
   url: string
@@ -5,7 +12,7 @@ export type Post = {
   title: string
   author: string
   preview?: {
-    images: [{ source: { url: string } }]
+    images: Image[]
   }
 }
 
