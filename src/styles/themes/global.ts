@@ -22,14 +22,12 @@ export const GlobalStyle = createGlobalStyle`
   body {
     ${({ theme }) => css`
       font-family: ${theme.fonts.family};
+      background-color: ${theme.colors.main};
     `}
   }
 
   #root {
-    ${({ theme }) => css`
-      background-color: ${theme.colors.main};
-      min-height: 100vh;
-    `}
+    min-height: 100vh;
   }
 
   button, a {
