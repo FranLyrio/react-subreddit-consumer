@@ -1,4 +1,5 @@
 import { useMemo } from 'react'
+import reactLogo from '../../assets/logo-react.png'
 import { timeDifference } from '../../utils/timeDifference'
 import * as S from './styles'
 
