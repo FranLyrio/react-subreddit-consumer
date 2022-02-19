@@ -1,5 +1,5 @@
 const customizedMediaQuery = (media: number) =>
-  `@media screen and (min-width: ${media}px)`
+  `@media screen and (max-width: ${media}px)`
 
 export const theme = {
   colors: {
@@ -22,7 +22,9 @@ export const theme = {
     size: {
       large: '3.6rem',
       medium: '2rem',
-      small: '1.6rem'
+      small: '1.6rem',
+      xsmall: '1.2rem',
+      xxsmall: '1rem'
     },
 
     lineHeight: {
@@ -32,7 +34,9 @@ export const theme = {
     }
   },
   breakpoints: {
-    small: customizedMediaQuery(420),
+    xxsmall: customizedMediaQuery(320),
+    xsmall: customizedMediaQuery(375),
+    small: customizedMediaQuery(425),
     medium: customizedMediaQuery(768),
     large: customizedMediaQuery(1024),
     xlarge: customizedMediaQuery(1440)
