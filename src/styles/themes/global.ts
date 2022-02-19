@@ -13,6 +13,12 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 62.5%;
   }
 
+  ${({ theme }) => theme.breakpoints.small} {
+    html {
+      font-size: 54%;
+    }
+  }
+
   body {
     ${({ theme }) => css`
       font-family: ${theme.fonts.family};

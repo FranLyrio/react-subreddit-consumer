@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
 `
 
 export const WrapperInfo = styled.div`
-  flex: 1;
+  width: 100%;
 `
 
 export const Avatar = styled.div`
@@ -18,6 +18,10 @@ export const Avatar = styled.div`
     width: 7.7rem;
     height: 7.7rem;
     border-radius: 0.8rem;
+
+    ${theme.breakpoints.small} {
+      display: none;
+    }
   `}
 `
 
@@ -49,9 +53,13 @@ export const Link = styled.a`
   ${({ theme }) => css`
     font-size: ${theme.fonts.size.small};
     font-weight: ${theme.fonts.weight.bold};
+    color: ${theme.colors.black};
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
     margin-top: 0.9rem;
     display: block;
-    color: ${theme.colors.black};
     transition: 0.3s;
 
     :hover {

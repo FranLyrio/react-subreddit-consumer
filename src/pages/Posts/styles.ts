@@ -18,7 +18,12 @@ export const HeaderWrapper = styled.div`
 `
 
 export const ButtonsWrapper = styled.div`
-  margin: 2.1rem auto;
+  margin: 2.1rem 0;
+  padding: 0 1.2rem;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
 
   button + button {
     margin-left: 1.6rem;
@@ -35,4 +40,5 @@ export const PostWrapper = styled.div`
 
   display: flex;
   flex-direction: column;
+  padding: 0 1.2rem;
 `

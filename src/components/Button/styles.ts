@@ -4,12 +4,8 @@ import { ButtonProps } from '.'
 type WrapperProps = Pick<ButtonProps, 'width' | 'color' | 'isSelected'>
 
 export const buttonModifiers = {
-  full: (theme: DefaultTheme) => css`
-    width: 100%;
-
-    /* ${theme.breakpoints.small} {
-      min-width: 8rem;
-    } */
+  full: () => css`
+    max-width: 100%;
   `,
   withPrimaryColor: (theme: DefaultTheme) => css`
     background-color: ${theme.colors.primary};
@@ -33,8 +29,11 @@ export const Wrapper = styled.button<WrapperProps>`
     font-weight: ${theme.fonts.weight.normal};
     font-size: ${theme.fonts.size.medium};
     line-height: ${theme.fonts.lineHeight.medium};
-    width: 20.2rem;
     height: 4.8rem;
+    width: 100%;
+    max-width: 20.2rem;
+
+    /* flex: 1; */
     border-radius: 0.8rem;
     transition: 0.2s;
 
@@ -43,7 +42,7 @@ export const Wrapper = styled.button<WrapperProps>`
       opacity: 0.6;
     }
 
-    ${width === 'full' && buttonModifiers.full(theme)}
+    ${width === 'full' && buttonModifiers.full()}
     ${color === 'primary' && buttonModifiers.withPrimaryColor(theme)}
     ${isSelected && buttonModifiers.withPrimaryColor(theme)}
     ${disabled && buttonModifiers.disabled()}
