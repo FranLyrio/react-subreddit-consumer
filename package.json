@@ -37,6 +37,7 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^7.0.4",
     "jest-styled-components": "^7.0.8",
+    "lint-staged": "^12.3.4",
     "prettier": "2.5.1",
     "typescript": "^4.5.5",
     "webpack": "^5.69.1"
@@ -44,11 +45,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "lint": "eslint src",
+    "lint": "eslint src --max-warnings=0",
     "prepare": "husky install"
   },
   "eslintConfig": {
@@ -67,6 +68,7 @@
       }
     ]
   },
+  
   "browserslist": {
     "production": [
       ">0.2%",
