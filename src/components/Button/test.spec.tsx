@@ -11,8 +11,7 @@ describe('<Button />', () => {
     const button = screen.getByRole('button')
     expect(button).toBeInTheDocument()
     expect(button).toHaveStyle({
-      'background-color': '#a7b0be',
-      width: '20.2rem'
+      'background-color': '#a7b0be'
     })
     expect(button).not.toHaveProperty('isSelected')
     expect(button).not.toHaveProperty('isLoading')
