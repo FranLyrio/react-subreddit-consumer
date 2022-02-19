@@ -1,10 +1,7 @@
 import { useCallback } from 'react'
-import { useToast } from '../hooks/useToast'
 import { PostsResponse } from './types'
 
 export const useRedditService = () => {
-  const { addToast } = useToast()
-
   const getPosts = useCallback(
     async (category: string, after?: string): Promise<PostsResponse> => {
       try {
@@ -21,11 +18,13 @@ export const useRedditService = () => {
 
         return teste
       } catch (error) {
-        addToast()
+        alert(
+          'Oops! Ocorreu um erro ao carregar dados. Tente novamente mais tarde.'
+        )
         throw new Error()
       }
     },
-    [addToast]
+    []
   )
 
   return { getPosts }
