@@ -19,14 +19,14 @@ jobs:
         with:
           node-version: '16.13.1'
 
+      - name: Lint
+        run: yarn lint
+
       - name: Install dependencies
         run: yarn
-
-      - name: Build package
-        run: yarn lint
 
       - name: Run tests
         run: yarn test
 
-      - name: Build package
+      - name: Build
         run: yarn build
