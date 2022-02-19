@@ -16,7 +16,7 @@ describe('<PostCard />', () => {
     )
 
     expect(
-      screen.getByLabelText(/avatar do autor da postagem/i)
+      screen.getByLabelText(/imagem relacionada à postagem/i)
     ).toBeInTheDocument()
 
     expect(

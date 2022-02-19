@@ -4,6 +4,9 @@ export type Post = {
   created_utc: number
   title: string
   author: string
+  preview?: {
+    images: [{ source: { url: string } }]
+  }
 }
 
 export type PostsResponse = {

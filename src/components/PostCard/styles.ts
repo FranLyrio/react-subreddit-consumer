@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   margin: 1.2rem 0;
 `
 
-export const Avatar = styled.div`
+export const Image = styled.img`
   ${({ theme }) => css`
     background-color: ${theme.colors.gray};
     width: 7.7rem;

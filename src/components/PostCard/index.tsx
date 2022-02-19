@@ -1,4 +1,5 @@
 import { useEffect, useMemo } from 'react'
+import reactLogo from '../../assets/logo-react.png'
 import { timeDifference } from '../../utils/timeDifference'
 import * as S from './styles'
 
@@ -7,13 +8,15 @@ type PostCardProps = {
   time?: number
   userNickName?: string
   link?: string
+  media?: string
 }
 
 export const PostCard = ({
   link,
   time,
   title,
-  userNickName
+  userNickName,
+  media
 }: PostCardProps) => {
   const diffTime = useMemo(() => {
     if (time) {
@@ -26,7 +29,10 @@ export const PostCard = ({
       <S.Divider />
 
       <S.Wrapper>
-        <S.Avatar role="img" aria-label="Avatar do autor da postagem" />
+        <S.Image
+          src={media ? media : reactLogo}
+          aria-label="Imagem relacionada à postagem"
+        />
 
         <S.WrapperInfo>
           <S.Title>{title}</S.Title>

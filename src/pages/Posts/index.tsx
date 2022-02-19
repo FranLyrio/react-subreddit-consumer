@@ -85,6 +85,7 @@ export const Posts = () => {
                 time={post.created_utc}
                 title={post.title}
                 userNickName={post.author}
+                media={post.preview?.images[0].source.url}
               />
             ))}
 
