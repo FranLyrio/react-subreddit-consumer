@@ -33,7 +33,6 @@ export const Wrapper = styled.button<WrapperProps>`
     width: 100%;
     max-width: 20.2rem;
 
-    /* flex: 1; */
     border-radius: 0.8rem;
     transition: 0.2s;
 
