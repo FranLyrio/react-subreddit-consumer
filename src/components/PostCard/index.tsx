@@ -26,7 +26,7 @@ export const PostCard = ({
       <S.Divider />
 
       <S.Wrapper>
-        <S.Avatar />
+        <S.Avatar role="img" aria-label="Avatar do autor da postagem" />
 
         <S.WrapperInfo>
           <S.Title>{title}</S.Title>
