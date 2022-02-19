@@ -1,17 +1,17 @@
 import 'jest-styled-components'
-import { screen } from '@testing-library/react'
+import { screen, waitFor } from '@testing-library/react'
 
 import { PostCard } from '.'
 import { renderWithTheme } from '../../utils/renderWithTheme'
 
 describe('<PostCard />', () => {
   it('deve renderizar o componente com as propriedades passadas', () => {
-    renderWithTheme(
+    const { container } = renderWithTheme(
       <PostCard
         title="Um título qualquer"
         userNickName="winnin"
-        link="fakeLink"
-        time={new Date().getTime()}
+        link="winnin.com"
+        time={new Date().setHours(new Date().getHours() - 2) / 1000}
       />
     )
 
@@ -23,12 +23,11 @@ describe('<PostCard />', () => {
       screen.getByRole('heading', { name: /um título qualquer/i })
     ).toBeInTheDocument()
 
-    expect(screen.getByText(/winnin/i).parentElement).toBeInTheDocument()
+    expect(container).toHaveTextContent(/enviado há 2 horas por winnin/)
 
-    const anchorElement = screen.getByRole('link', { name: /fakeLink/i })
-
+    const anchorElement = screen.getByRole('link', { name: /winnin.com/i })
     expect(anchorElement).toBeInTheDocument()
-    expect(anchorElement).toHaveAttribute('href', 'fakeLink')
+    expect(anchorElement).toHaveAttribute('href', 'winnin.com')
     expect(anchorElement).toHaveAttribute('target', '_blank')
   })
 })
