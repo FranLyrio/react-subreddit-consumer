@@ -12,17 +12,24 @@ export const Wrapper = styled.div`
   margin: 1.2rem 0;
 `
 
-export const Image = styled.img`
+export const Image = styled.div`
   ${({ theme }) => css`
     background-color: ${theme.colors.gray};
     width: 7.7rem;
     height: 7.7rem;
     border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
 
     ${theme.breakpoints.small} {
       display: none;
     }
   `}
+
+  img {
+    width: 100%;
+    border-radius: 0.8rem;
+  }
 `
 
 export const WrapperInfo = styled.div`

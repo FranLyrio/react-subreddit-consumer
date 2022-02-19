@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 
 import { Button } from '../../components/Button'
 import { Header } from '../../components/Header'
@@ -85,11 +85,7 @@ export const Posts = () => {
                 time={post.created_utc}
                 title={post.title}
                 userNickName={post.author}
-                media={
-                  post.preview?.images[0].source.resolutions
-                    ? post.preview?.images[0].source.resolutions[0].url
-                    : post.preview?.images[0].source.url
-                }
+                media={post.preview?.images[0].source.url}
               />
             ))}
 

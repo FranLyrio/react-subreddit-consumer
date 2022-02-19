@@ -1,8 +1,5 @@
 type Image = {
-  source: {
-    resolutions?: [{ url: string }]
-    url: string
-  }
+  source: { url: string }
 }
 
 export type Post = {

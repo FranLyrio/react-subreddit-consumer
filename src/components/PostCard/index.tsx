@@ -29,10 +29,12 @@ export const PostCard = ({
       <S.Divider />
 
       <S.Wrapper>
-        <S.Image
-          src={media ? media : reactLogo}
-          aria-label="Imagem relacionada à postagem"
-        />
+        <S.Image>
+          <img
+            src={media ? media : reactLogo}
+            aria-label="Imagem relacionada à postagem"
+          />
+        </S.Image>
 
         <S.WrapperInfo>
           <S.Title>{title}</S.Title>
