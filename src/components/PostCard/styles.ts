@@ -1,9 +1,7 @@
 import styled, { css } from 'styled-components'
 
 export const PostCard = styled.div`
-  ${({ theme }) => css`
-    background-color: ${theme.colors.main};
-  `}
+  background-color: transparent;
 `
 
 export const Wrapper = styled.div`
@@ -12,10 +10,6 @@ export const Wrapper = styled.div`
   align-items: center;
   gap: 1.3rem;
   margin: 1.2rem 0;
-`
-
-export const WrapperInfo = styled.div`
-  width: 100%;
 `
 
 export const Avatar = styled.div`
@@ -29,6 +23,10 @@ export const Avatar = styled.div`
       display: none;
     }
   `}
+`
+
+export const WrapperInfo = styled.div`
+  width: 100%;
 `
 
 export const Title = styled.h4`
@@ -63,6 +61,8 @@ export const Link = styled.a`
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    max-width: 95rem;
 
     margin-top: 0.9rem;
     display: block;
