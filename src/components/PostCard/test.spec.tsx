@@ -1,5 +1,5 @@
 import 'jest-styled-components'
-import { screen, waitFor } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 
 import { PostCard } from '.'
 import { renderWithTheme } from '../../utils/renderWithTheme'
