@@ -12,6 +12,7 @@ export const useRedditService = () => {
         const { data } = await apiResponse.json()
 
         const response = {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           posts: data.children.map((item: any) => item.data),
           after: data.after
         }
