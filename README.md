@@ -1,3 +1,17 @@
+# Instalando dependências
+
+No terminal, execute:
+
+```shell
+npm install
+```
+
+ou
+
+```shell
+yarn
+```
+
 # Rodando aplicação
 
 No terminal, execute:
@@ -20,6 +34,12 @@ Ou, com o código aberto, execute no terminal:
 yarn storybook
 ```
 
+ou
+
+```shell
+npm run storybook
+```
+
 # Testando aplicação
 
 No terminal, execute:
@@ -28,9 +48,17 @@ No terminal, execute:
 yarn test
 ```
 
+```shell
+npm run test
+```
+
 Esse comando roda os testes sem observá-los.
 Caso queira observar, rode:
 
 ```shell
 yarn test:watch
+```
+
+```shell
+npm run test:watch
 ```
