@@ -1,3 +1,6 @@
+# Sobre
+Este projeto consome a api do reddit, mais específicamente o subreddit do Reactjs.
+
 # Instalando dependências
 
 No terminal, execute:
