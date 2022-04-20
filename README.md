@@ -1,5 +1,8 @@
 # Sobre
 Este projeto consome a api do reddit, mais específicamente o subreddit do Reactjs.
+As tecnologias utilizadas foram:
+- Testing Library, Jest e Jest Styled Components para testes
+- Storybook para documentação de UI
 
 # Instalando dependências
 
